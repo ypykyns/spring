@@ -21,7 +21,7 @@ public class OrdemServico {
 	@ManyToOne
 	private Cliente cliente;
 	
-	private String descricao;
+	private String descricaoString;
 	private BigDecimal preco;
 	
 	@Enumerated(EnumType.STRING)
@@ -43,11 +43,11 @@ public class OrdemServico {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
-	public String getDescricao() {
-		return descricao;
+	public String getDescricaoString() {
+		return descricaoString;
 	}
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
+	public void setDescricaoString(String descricaoString) {
+		this.descricaoString = descricaoString;
 	}
 	public BigDecimal getPreco() {
 		return preco;
