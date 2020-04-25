@@ -1,0 +1,5 @@
+package com.algaworks.core;
+
+public class ModelMapperConfig {
+
+}

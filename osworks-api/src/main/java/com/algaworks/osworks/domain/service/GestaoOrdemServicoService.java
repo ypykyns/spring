@@ -1,6 +1,7 @@
 package com.algaworks.osworks.domain.service;
 
-import java.time.LocalDateTime;
+
+import java.time.OffsetDateTime;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +12,6 @@ import com.algaworks.osworks.domain.model.OrdemServico;
 import com.algaworks.osworks.domain.model.StatusOrdemServico;
 import com.algaworks.osworks.domain.repository.ClienteRepository;
 import com.algaworks.osworks.domain.repository.OrdemServicoRepository;
-
-import jdk.internal.net.http.common.MinimalFuture.ExceptionalSupplier;
 
 @Service
 public class GestaoOrdemServicoService {
@@ -30,7 +29,7 @@ public class GestaoOrdemServicoService {
 		
 		ordemServico.setCliente(cliente);
 		ordemServico.setStatus(StatusOrdemServico.ABERTA);
-		ordemServico.setDataAbertura(LocalDateTime.now());
+		ordemServico.setDataAbertura(OffsetDateTime.now());
 		
 		return ordemServicoRepository.save(ordemServico);
 	}
