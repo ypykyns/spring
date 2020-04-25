@@ -40,7 +40,7 @@ public class OrdemServicoController {
 	@PostMapping
 	@ResponseStatus(HttpStatus.CREATED)
 	public OrdemServicoModel criar(@Valid @RequestBody OrdemServicoInput ordemServicoInput) {
-		OrdemServico ordemServico = toEntity(ordemServicoInput);
+		OrdemServico ordemServico = null;
 		
 		return toModel(gestaoOrdemServico.criar(ordemServico));
 	}
