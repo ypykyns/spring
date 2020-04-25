@@ -4,3 +4,5 @@
 1587768347726	Rename type 'OrdemSrvico'
 1587854869649	Delete element
 1587856484385	Encapsulate field 'id'
+1587857593156	Delete element
+1587858557379	Rename resource 'cria-tabela-comentarios.sql'

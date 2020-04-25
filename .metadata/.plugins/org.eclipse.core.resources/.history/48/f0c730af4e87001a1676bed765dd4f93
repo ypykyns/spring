@@ -22,28 +22,26 @@ public class OrdemServico {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-		
+	
+	
+	
 	@ManyToOne
 	private Cliente cliente;	
 	private String descricao;	
 	private BigDecimal preco;
-		
+	
+	
 	@Enumerated(EnumType.STRING)
 	private StatusOrdemServico status;
-		
-	private OffsetDateTime dataAbertura;	
 	
+	
+	private OffsetDateTime dataAbertura;	
 	private OffsetDateTime dataFinalizacao;
 	
-	@OneToMany(mappedBy = "ordemServico")
+	@OneToMany
 	private List<Comentario> comentarios = new ArrayList<>();
 	
-	public List<Comentario> getComentarios() {
-		return comentarios;
-	}
-	public void setComentarios(List<Comentario> comentarios) {
-		this.comentarios = comentarios;
-	}
+	
 	public Long getId() {
 		return id;
 	}
