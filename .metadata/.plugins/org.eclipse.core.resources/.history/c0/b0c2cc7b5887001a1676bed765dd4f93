@@ -45,8 +45,6 @@ public class GestaoOrdemServicoService {
 		
 		ordemServico.finalizar();
 		
-		ordemServicoRepository.save(ordemServico);
-		
 	}	
 	
 	public Comentario adicionarComentario (Long ordemServicoId, String descricao) {
